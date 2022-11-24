@@ -26,6 +26,6 @@
                 }
             %>
         </table>
-    </div>s
+    </div>
 </body>
 </html>
