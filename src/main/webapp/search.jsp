@@ -7,30 +7,52 @@
 <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <form action ="Search">
-        <input type ="text" name ="keyword"></input>
-        <button type ="submit">Search</button>
-    </form>
-<div class = "resultTable">
-    <table border = 2>
-        <tr>
-            <td>Name</td>
-            <td>Link</td>
-        </tr>
-        <%
-            ArrayList<SearchResult> results = (ArrayList<SearchResult>) request.getAttribute("results");
-            for(SearchResult result : results){
+    <div class="container-Search">
+            <form action = "Search" class="main-Search">
+                <div class="searchImg-Search">
+                    <img src="/Search-Engine/image/clipart4692155.png" alt="SearchEngine" class="logoSearchEngine-Search">
+                </div>
 
-        %>
-        <tr>
-            <td><%out.println(result.getTitle());%></td>
-            <td><a href = "<%out.println(result.getLink());%>"><%out.println(result.getLink());%></a></td>
-        </tr>
-        <%
-            }
-        %>
-    </table>
+                <div class="searchBox-Search">
+                    <input
+                        type="text"
+                        class="query-Search"
+                        name = "keyword"
+                        placeholder="Search or type a URL"
+                    />
+                    <div class="icons-Search">
+                        <img src="/Search-Engine/image/search.png" alt="search img">
 
-</div>
+                    </div>
+                </div>
+
+                <div class="button-Search">
+                    <button class="searchBtn-Search" type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+
+    <section class = "resultTable">
+        <div class="searchResult">
+            <%
+                ArrayList<SearchResult> results = (ArrayList<SearchResult>) request.getAttribute("results");
+                for(SearchResult result : results){
+            %>
+
+        <div class = "searchLink">
+            <p><%out.println(result.getLink());%></p>
+        </div>
+        <div class = "searchTitle">
+            <h3><a href = "<%out.println(result.getLink());%>"><%out.println(result.getTitle());%></a></h3>
+        </div>
+
+
+            <%
+                }
+            %>
+
+        </div>
+    </section>
+
 </body>
 </html>

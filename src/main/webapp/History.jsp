@@ -6,22 +6,31 @@
 
 <link rel="stylesheet" href="style.css"/>
 </head>
-<body>
-    <div class= "resultTable">
-        <table border = 2>
-            <tr>
-                <td>Name</td>
-                <td>Link</td>
-            </tr>
+<body class="history-body">
+    <h3>History</h3>
+    <div class="container-history">
+        <table >
+            <thead>
+                <tr>
+                    <th>Search</th>
+                    <th>URL</th>
+                    <th class="visit">Visit</th>
+                </tr>
+            </thead>
+
             <%
                 ArrayList<HistoryResult> results = (ArrayList<HistoryResult>) request.getAttribute("results");
                 for(HistoryResult result : results){
-
             %>
-            <tr>
-                <td><%out.println(result.getName());%></td>
-                <td><a href = "<%out.println(result.getLink());%>"><%out.println(result.getLink());%></a></td>
-            </tr>
+
+            <tbody>
+                <tr>
+                    <td class="key"><%out.println(result.getName());%></td>
+                    <td><%out.println(result.getLink());%></td>
+                    <td class="open-button"><a href="<%out.println(result.getLink());%>"><button class="openBtn" type = "submit">Open</button></a></td>
+                </tr>
+            </tbody>
+
             <%
                 }
             %>
