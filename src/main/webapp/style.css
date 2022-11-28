@@ -63,20 +63,22 @@ body {
 
 }
 .searchBtn {
-    /* margin: 0 45%; */
     margin-top: 20px;
-    padding: 12px 20px;
-    color: #555;
-    font-size: 16px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #228be6;
+    font-size: 14px;
     border: none;
     cursor: pointer;
     border-radius: 4px;
     border: 1px solid #ccc;
     outline: none;
+    transition: box-shadow .3s;
 }
 
 .searchBtn:hover {
-    border: 1px solid #ccc;
+     border: 1px solid #ccc;
+     box-shadow: 0 0 11px rgba(33,33,33,.15);
 }
 
 
@@ -147,22 +149,35 @@ hr {
     margin-top: 5px;
 
 }
+
+.query-Search:hover {
+    border: 1px solid #ccc;
+    box-shadow: 0 0 11px rgba(33,33,33,.1);
+}
+
+
+
 .searchBtn-Search {
-    /* margin: 0 45%; */
     margin-top: 20px;
-    padding: 12px 20px;
     color: #555;
-    font-size: 16px;
+    font-size: 14px;
     border: none;
     cursor: pointer;
     border-radius: 4px;
     border: 1px solid #ccc;
     outline: none;
+    color: #fff;
+    transition: box-shadow .3s;
+    padding: 10px 20px;
+    background-color: #228be6;
 }
 
 .searchBtn-Search:hover {
     border: 1px solid #ccc;
+    box-shadow: 0 0 11px rgba(33,33,33,.15);
 }
+
+
 
 .History-button {
     width: 100%;
@@ -176,15 +191,23 @@ hr {
 
 .historyBtn {
     margin-top: 20px;
-    padding: 8px 16px;
-    color: rgb(197, 115, 115);
-    font-size: 16px;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 14px;
     border: none;
     cursor: pointer;
-    border-radius: 32px;
+    border-radius: 30px;
     border: 1px solid #ccc;
     outline: none;
+    background-color:#228be6;
+    transition: box-shadow .3s;
 }
+
+.historyBtn:hover {
+    border: 1px solid #ccc;
+    box-shadow: 0 0 11px rgba(33,33,33,.15);
+}
+
 
 
 
@@ -283,7 +306,7 @@ a:link {
 table {
     width: 700px;
     border-collapse: collapse;
-    box-shadow: 0 20px 30px 0 rgb(0 0 0 / 7%);
+    box-shadow: 0 0 11px rgba(33,33,33,.15);
     border-radius: 12px;
 }
 .key {
@@ -307,6 +330,7 @@ thead tr {
 thead th {
     font-weight: 600;
 }
+
 
 tbody tr:nth-child(odd){
     background-color: #f8f9fa;
@@ -334,4 +358,9 @@ tbody tr:nth-child(even){
     border-radius: 32px;
     outline: none;
 
+}
+
+.openBtn:hover {
+    border: 1px solid #ccc;
+    box-shadow: 0 0 11px rgba(33,33,33,.15);
 }

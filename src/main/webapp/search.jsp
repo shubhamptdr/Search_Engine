@@ -10,7 +10,9 @@
     <div class="container-Search">
             <form action = "Search" class="main-Search">
                 <div class="searchImg-Search">
-                    <img src="/image/clipart4692155.png" alt="SearchEngine" class="logoSearchEngine-Search">
+                    <a href="index.jsp">
+                        <img src="/image/clipart4692155.png" alt="SearchEngine" class="logoSearchEngine-Search">
+                    </a>
                 </div>
 
                 <div class="searchBox-Search">
