@@ -10,7 +10,7 @@
     <div class="container-Search">
             <form action = "Search" class="main-Search">
                 <div class="searchImg-Search">
-                    <img src="/Search-Engine/image/clipart4692155.png" alt="SearchEngine" class="logoSearchEngine-Search">
+                    <img src="/image/clipart4692155.png" alt="SearchEngine" class="logoSearchEngine-Search">
                 </div>
 
                 <div class="searchBox-Search">
@@ -21,7 +21,7 @@
                         placeholder="Search or type a URL"
                     />
                     <div class="icons-Search">
-                        <img src="/Search-Engine/image/search.png" alt="search img">
+                        <img src="/image/search.png" alt="search img">
 
                     </div>
                 </div>

@@ -28,7 +28,6 @@ public class DatabaseConnection {
             /*  Here, Java program is loading mySql driver to establish database connection. */
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection("jdbc:mysql://sql12.freesqldatabase.com/"+db+"?user="+user+"&password="+pwd);
-
         }
         /* Handle  exceptions */
         catch(Exception exception){

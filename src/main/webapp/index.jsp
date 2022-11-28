@@ -8,7 +8,7 @@
     <div class="container">
         <form action = "Search" class="main">
             <div class="searchImg">
-                <img src="/Search-Engine/image/clipart4692155.png" alt="SearchEngine" class="logoSearchEngine">
+                <img src="/image/clipart4692155.png" alt="SearchEngine" class="logoSearchEngine">
             </div>
 
             <div class="searchBox">
@@ -19,7 +19,7 @@
                     placeholder="Search or type a URL"
                 />
                 <div class="icons">
-                    <img src="/Search-Engine/image/search.png" alt="search img">
+                    <img src="/image/search.png" alt="search img">
 
                 </div>
             </div>

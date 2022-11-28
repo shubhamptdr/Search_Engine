@@ -50,7 +50,7 @@ public class Search extends HttpServlet {
             preparedStatement.setString(1,keyword);
             /* 2 specifies the second parameter in the query */
 
-            preparedStatement.setString(2, "https://search---engine.herokuapp.com/Search?keyword="+keyword);
+            preparedStatement.setString(2, "https://myacciosearchengine.herokuapp.com/Search?keyword="+keyword);
             preparedStatement.executeUpdate();
 
             /* forward request using RequestDispatcher from servlet to jsp */
