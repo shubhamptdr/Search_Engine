@@ -26,10 +26,9 @@ public class Search extends HttpServlet {
             /* Getting results from database */
             ResultSet resultSet = connection
                                     .createStatement()
-                                    .executeQuery("select pagetitle,pagelink ,(length(lower(pagedata))-length(replace(lower(pagedata),'"+keyword+"','')))/length('java') as countOccurence \n" +
+                                    .executeQuery("select pagetitle,pagelink, SUBSTR(pagedata, 1, 300) AS substring,(length(lower(pagedata))-length(replace(lower(pagedata),'"+keyword+"','')))/length('java') as countOccurence \n" +
                                     "from pages order by countOccurence  desc limit 30;");
-
-
+//
             /*  ArrayList i.e. results that store search results  */
             ArrayList<SearchResult> results = new ArrayList<SearchResult>();
 
@@ -38,6 +37,8 @@ public class Search extends HttpServlet {
                 SearchResult searchResult = new SearchResult();
                 searchResult.setTitle(resultSet.getString("pagetitle"));
                 searchResult.setLink(resultSet.getString("pagelink"));
+//                searchResult.setData(resultSet1.getString("pagedata"));
+                searchResult.setData(resultSet.getString("substring"));
                 /* add  searchResult to  ArrayList i.e. results */
                 results.add(searchResult);
             }

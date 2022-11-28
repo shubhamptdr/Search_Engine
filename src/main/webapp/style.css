@@ -209,7 +209,6 @@ hr {
     justify-content: center;
     row-gap: 2px;
     padding: 20px 10px;
-    padding-bottom: 40px;
     align-items: center;
 
 
@@ -246,6 +245,11 @@ a:link {
     text-decoration: underline;
   }
 
+  .searchData {
+      font-size: 14px;
+      color: #4d5156;
+      margin-bottom: 40px;
+  }
 
 
 

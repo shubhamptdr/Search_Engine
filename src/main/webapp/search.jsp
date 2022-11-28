@@ -46,6 +46,9 @@
             <h3><a href = "<%out.println(result.getLink());%>"><%out.println(result.getTitle());%></a></h3>
         </div>
 
+        <div class="searchData">
+            <p><%out.println(result.getData());%></p>
+        </div>
 
             <%
                 }

@@ -21,6 +21,7 @@ public class DatabaseConnection {
         String user = "sql12580037";
         String pwd = "tJiGrBZhQI";
 
+
         return getConnection(db,user,pwd);
     }
     private static Connection getConnection(String db,String user,String pwd){
@@ -28,6 +29,7 @@ public class DatabaseConnection {
             /*  Here, Java program is loading mySql driver to establish database connection. */
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection("jdbc:mysql://sql12.freesqldatabase.com/"+db+"?user="+user+"&password="+pwd);
+
         }
         /* Handle  exceptions */
         catch(Exception exception){
