@@ -28,7 +28,7 @@ public class Search extends HttpServlet {
                                     .createStatement()
                                     .executeQuery("select pagetitle,pagelink, SUBSTR(pagedata, 1, 300) AS substring,(length(lower(pagedata))-length(replace(lower(pagedata),'"+keyword+"','')))/length('java') as countOccurence \n" +
                                     "from pages order by countOccurence  desc limit 30;");
-//
+
             /*  ArrayList i.e. results that store search results  */
             ArrayList<SearchResult> results = new ArrayList<SearchResult>();
 
@@ -37,7 +37,6 @@ public class Search extends HttpServlet {
                 SearchResult searchResult = new SearchResult();
                 searchResult.setTitle(resultSet.getString("pagetitle"));
                 searchResult.setLink(resultSet.getString("pagelink"));
-//                searchResult.setData(resultSet1.getString("pagedata"));
                 searchResult.setData(resultSet.getString("substring"));
                 /* add  searchResult to  ArrayList i.e. results */
                 results.add(searchResult);
@@ -51,7 +50,7 @@ public class Search extends HttpServlet {
             preparedStatement.setString(1,keyword);
             /* 2 specifies the second parameter in the query */
 
-            preparedStatement.setString(2, "https://myacciosearchengine.herokuapp.com/Search?keyword="+keyword);
+            preparedStatement.setString(2, "/Search?keyword="+keyword);
             preparedStatement.executeUpdate();
 
             /* forward request using RequestDispatcher from servlet to jsp */
