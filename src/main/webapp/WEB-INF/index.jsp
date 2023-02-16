@@ -1,13 +1,16 @@
-<html>
+
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
 <head>
 <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css"/>
+<link href="css/style.css" rel="stylesheet">
+
     <title>Home</title>
     <link rel="icon" type="image/x-icon" href="/image/clipart4692155.png">
 </head>
 <body>
     <div class="container">
-        <form action = "Search" class="main">
+        <form action = "search" class="main">
             <div class="searchImg">
                 <img src="/image/clipart4692155.png" alt="SearchEngine" class="logoSearchEngine">
             </div>
@@ -31,7 +34,7 @@
         </form>
     </div>
     <div class="History-button">
-            <form action = "History" >
+            <form action = "history" >
                 <button class="historyBtn" type = "submit">History</button>
             </form>
     </div>
